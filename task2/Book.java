@@ -32,6 +32,7 @@ public class Book {
 
 	}
 
+	/*
 	public static void main(String[] args) {
 
 		// Create book object
@@ -47,4 +48,5 @@ public class Book {
 		System.out.println(book1.display(result1));
 
 	}
+	*/
 }
