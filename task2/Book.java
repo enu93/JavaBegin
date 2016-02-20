@@ -26,6 +26,11 @@ public class Book {
 		return total;
 	}
 
+	// Define Display method
+	public String display(int res) {
+		return "Total Cost of book isbn " + isbn + " is " + res;
+
+	}
 
 	public static void main(String[] args) {
 
@@ -33,14 +38,13 @@ public class Book {
 		Book book = new Book("Java Beginner", "Java Developer", 1234, "ABC publisher", 30);
 		book.qty++;
 		int result = book.calculateCharge(book.qty, book.price);
-		System.out.println("Total Cost of book isbn " + book.isbn + " is " + result);
-
+		System.out.println(book.display(result));
 
 		// Create book1 object
 		Book book1 = new Book("Java Beginner", "Java Developer", 1234, "ABC publisher", 10);
 		book1.qty++;
 		int result1 = book1.calculateCharge(book1.qty, book1.price);
-		System.out.println("Total Cost of book isbn " + book1.isbn + " is " + result1);
+		System.out.println(book1.display(result1));
 
 	}
 }
