@@ -2,29 +2,45 @@
 // Book class has method calculateCharge that accepts the quantity sold and returns the total charge
 
 public class Book {
-	String title;
-	String author;
-	int isbn;
-	String publisher;
-	int price;
+	public String title;
+	public String author;
+	public int isbn;
+	public String publisher;
+	public int price;
 
 	private int total = 0;
+	private int qty = 0;
 
-	public Book(String title, String author, int isbn, String publisher, int price) {
-		title = title;
-		author = author;
-		isbn = isbn;
-		publisher = publisher;
-		price = price;
+	// Define Book constructor
+	public Book(String titles, String authors, int isbns, String publishers, int prices) {
+		title = titles;
+		author = authors;
+		isbn = isbns;
+		publisher = publishers;
+		price = prices;
 	}
 
-	public void calculateCharge() {
-		total = isbn * price;
+	// Define calculateCharge method
+	public int calculateCharge(int quantity, int prices) {
+		total = quantity * prices;
+		return total;
 	}
+
 
 	public static void main(String[] args) {
+
+		// Create book object
 		Book book = new Book("Java Beginner", "Java Developer", 1234, "ABC publisher", 30);
-		System.out.println("title = " + book.title);
+		book.qty++;
+		int result = book.calculateCharge(book.qty, book.price);
+		System.out.println("Total Cost of book isbn " + book.isbn + " is " + result);
+
+
+		// Create book1 object
+		Book book1 = new Book("Java Beginner", "Java Developer", 1234, "ABC publisher", 10);
+		book1.qty++;
+		int result1 = book1.calculateCharge(book1.qty, book1.price);
+		System.out.println("Total Cost of book isbn " + book1.isbn + " is " + result1);
 
 	}
 }
