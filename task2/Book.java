@@ -1,7 +1,8 @@
 // 2.	Write Book class with attributes, title, author, isbn, publisher, and price.  
 // Book class has method calculateCharge that accepts the quantity sold and returns the total charge
 
-public class Book {
+class Book {
+// public class Book {
 	public String title;
 	public String author;
 	public int isbn;
@@ -12,6 +13,9 @@ public class Book {
 	private int qty = 0;
 
 	// Define Book constructor
+	public Book() {}
+
+	/*
 	public Book(String titles, String authors, int isbns, String publishers, int prices) {
 		title = titles;
 		author = authors;
@@ -19,6 +23,7 @@ public class Book {
 		publisher = publishers;
 		price = prices;
 	}
+	*/
 
 	// Define calculateCharge method
 	public int calculateCharge(int quantity, int prices) {
