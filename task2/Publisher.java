@@ -2,13 +2,17 @@
 
 public class Publisher {
 
-	String name = "Jave Beginner";
-	String state = "Texas";
+	public String name;
+	public String state;
+
+	public Publisher(String names, String states) {
+		name = names;
+		state = states;
+	}
 
 	public static void main(String[] args) {
-		Publisher pub = new Publisher();
+		Publisher pub = new Publisher("Java Begin", "TX");
 		System.out.println("Name = " + pub.name);
 		System.out.println("State = " + pub.state);
-
 	}
 }
