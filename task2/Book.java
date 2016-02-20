@@ -17,7 +17,8 @@ public class Book {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Hello");
+		Book book = new Book("Java Beginner", "Java Developer", 1234, "ABC publisher", 30);
+		System.out.println("title = " + book.title);
 
 	}
 }
