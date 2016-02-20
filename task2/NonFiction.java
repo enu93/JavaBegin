@@ -2,12 +2,13 @@
 // Fiction has attribute fiction code.  
 // NonFiction has attribute category code.
 
-public class Fiction extends Book {
 
-	public String fiction;
+public class NonFiction extends Book {
+
+	public String category;
 
 	public static void main(String[] args) {
-		Fiction fic = new Fiction();
-		System.out.println("Fiction");
+		NonFiction non = new NonFiction();
+		System.out.println("NonFiction");
 	}
 }
