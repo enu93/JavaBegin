@@ -5,36 +5,29 @@ class Book {
 // public class Book {
 	public String title;
 	public String author;
-	public int isbn;
+	public String isbn;
 	public String publisher;
-	public int price;
+	public double price;
+	public int quantity;
 
-	private int total = 0;
-	private int qty = 0;
+	private double total = 0;
 
 	// Define Book constructor
-	public Book() {}
-
-	/*
-	public Book(String titles, String authors, int isbns, String publishers, int prices) {
+	// public Book(String titles, String authors, String publishers, String isbns, double prices, int quantities) {
+	public Book(String titles, String authors, String publishers, String isbns, double prices) {
 		title = titles;
 		author = authors;
-		isbn = isbns;
 		publisher = publishers;
+		isbn = isbns;
 		price = prices;
+		// quantity = quantities;
 	}
-	*/
+	
 
 	// Define calculateCharge method
-	public int calculateCharge(int quantity, int prices) {
-		total = quantity * prices;
+	public double calculateCharge(int quantity) {
+		total = quantity * price;
 		return total;
-	}
-
-	// Define Display method
-	public String display(int res) {
-		return "Total Cost of book isbn " + isbn + " is " + res;
-
 	}
 
 	/*
