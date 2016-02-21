@@ -5,10 +5,20 @@
 
 public class NonFiction extends Book {
 
-	public String category;
+	public String nonfiction;
+
+	public NonFiction(String nonfictions, String titles, String authors, String publishers, String isbns, double prices) {
+		super(titles, authors, publishers, isbns, prices);
+		nonfiction = nonfictions;
+	}
+
+	public String getCategory(String category) {
+		return category;
+	}
 
 	public static void main(String[] args) {
-		NonFiction non = new NonFiction();
-		System.out.println("NonFiction");
+		NonFiction non = new NonFiction("NonFiction", "History of Texas", "Smith", "Prescott, CA", "123-683947687", 9.75);
+		System.out.println(non.getCategory("history"));
 	}
 }
+
